@@ -1,0 +1,111 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to right, rgb(26, 26, 29) 27.1%, rgb(136, 22, 45) 77.5%);
+    margin:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+
+}
+h2{
+    font-family: Haya;
+    color:white;
+    font-size: 55px;
+    text-align: center;
+    font-weight: normal;
+    margin: 30px 10px;
+}
+.calculator-grid{
+    display:grid;
+    
+    grid-template-columns: repeat(4,80px);
+    grid-template-rows: repeat(6,80px);
+    justify-content: center;
+
+}
+@font-face {
+    font-family: "Haya";
+    src: url(../MemphisRiver.otf);
+}
+.calculator-grid > button{
+    cursor: pointer;
+    font-size: 23px;
+    font-family: sans-serif;
+    border:0.5px solid rgba(255,255,255,.79);
+    outline: none;
+    background-color: rgba(255,255,255,.79)
+}
+.calculator-grid >button:hover, .calculator-grid >button:focus{
+    background-color:rgba(255,255,255,.9) ;
+}
+.span-two{
+    grid-column: span 2;
+}
+.span-two ~ .span-two{
+    
+    border-bottom-right-radius: 25px;
+    
+}
+.output{
+    grid-column: 1/span 4; 
+    background-color: rgba(0,0,0, .33);
+    display:flex;
+    flex-direction:column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 7.5px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-top-left-radius: 25px;
+   
+}
+.output .previous-operand{
+    color: rgba(255,255,255,.75);
+    font-size: 15px;
+}
+.output .current-operand{
+    color: white;
+    font-size: 25px;
+}
+.singleCol{
+    max-width: 750px;
+    margin: 0 auto;
+}
+.social-media-icons-white a{
+    color:white;
+    font-size: 25px;
+
+   
+}
+a{
+    height: 50px;
+    width: 50px;
+    border: 1px solid  rgba(0,0,0,.1);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+    border-radius:50%;
+    padding: 0;
+    text-align: center;
+    line-height: 50px;
+    background-color: rgba(0,0,0,.7);
+    margin: 0px 15px 0px 15px;
+}
+a:hover{
+ background-color: white;
+ color:black;
+ border: 1px white;
+ box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+}
+
+#content-particles-js{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:1}
+
